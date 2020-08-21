@@ -3,7 +3,7 @@
 const dropdownMenu = d3.select("#selDataset");
 
 
-d3.json("data/samples.json").then((data) => {
+d3.json("StarterCode/static/js/data/samples.json").then((data) => {
     console.log(data)
 
     //Populate names array from samples.json as new values in the drop dwon 

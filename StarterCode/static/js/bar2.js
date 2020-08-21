@@ -1,6 +1,6 @@
 
 function drawbar2(filter_value){
-      d3.json("../../data/samples.json").then((data) => {
+      d3.json("data/samples.json").then((data) => {
           const filterList= data.samples.filter(a=> a.id === filter_value);  //grab samples of selected OTU ID from dropdown 
           //console.log(filterList[0]);
           const x_axis = filterList[0].sample_values.map(item=>item).slice(0,10).reverse(); //get top 10 sample values

@@ -2,7 +2,7 @@
 function drawBubble(filter_value){
 let SampleSumByFamily = [];
 
-d3.json("../../data/samples.json").then((data) => {
+d3.json("data/samples.json").then((data) => {
         const filterList= data.samples.filter(a=> a.id === filter_value); //Filter by selected subject
         filterList[0].sample_values.map((sample_value,index) => {  //Loop through sample values of selected subject
                 const taxonomiclist = filterList[0].otu_labels[index];

@@ -4,7 +4,7 @@
 let SampleSumByOtuID = [];
 
 
-d3.json("../../data/samples.json").then((data) => {
+d3.json("data/samples.json").then((data) => {
     data.samples.map(sample => {
         //looping through samples array
         sample.otu_ids.map((otu,index)=>{
