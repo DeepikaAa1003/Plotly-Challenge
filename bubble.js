@@ -12,7 +12,8 @@ d3.json("data/samples.json").then((data) => {
             
                 // }
                 let familyValue = taxonomiclist.substring(0, lastIndexValue); //Get the family value from start of the string till last index of ;
-                familyValue = familyValue.replace(';', ',');  // replacing semicolon with comma
+                
+                familyValue = familyValue.replace(/;/g, ',');  // replacing semicolon with comma
                 
                 if(SampleSumByFamily.some(item => item.FamilyName === familyValue)){    //Check if the family value already exists in the final list
                     SampleSumByFamily.map(s=> {
